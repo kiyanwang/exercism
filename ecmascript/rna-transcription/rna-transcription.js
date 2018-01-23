@@ -1,6 +1,6 @@
 export default class Transcriptor {
     toRna(dna) {
-        return Array.prototype.map.call(dna, this.dnaToRna).join('');
+        return dna.split('').map(l => this.dnaToRna(l)).join('');
     }
 
     dnaToRna(nucleotide) {
